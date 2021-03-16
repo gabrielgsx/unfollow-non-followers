@@ -1,7 +1,5 @@
-
-
-username = 'investidormagnata'
-password = 'Coxinhadecoco'
+username = ''
+password = ''
 
 
 
