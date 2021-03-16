@@ -11,7 +11,7 @@ Change the "env.py" file with your credentials
 # Install Selenium
 pip install selenium
 
-# Run "login.py"
+# Run "login.py" * you only have to run it once * 
 
 # Run "main.py"
 
