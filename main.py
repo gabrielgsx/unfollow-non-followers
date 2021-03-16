@@ -35,7 +35,7 @@ def _get_following():
       """, scroll_box)
   links = scroll_box.find_elements_by_tag_name('a')
   names = [name.text for name in links if name.text != '']
-  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\following.py", "w")  
+  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\following.py", "w")  # CHANGE IT WITH YOUR DIRECTORY
   file.write(f"{names}") 
   file.close() 
   return
@@ -53,7 +53,7 @@ def _get_followers():
       """, scroll_box)
   links = scroll_box.find_elements_by_tag_name('a')
   names2 = [name.text for name in links if name.text != '']
-  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\followers.py", "w") 
+  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\followers.py", "w") # CHANGE IT WITH YOUR DIRECTORY
   file.write(f"{names2}") 
   file.close() 
   return
