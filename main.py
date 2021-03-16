@@ -11,24 +11,6 @@ driver = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
 driver.get("https://www.instagram.com")
 sleep(3)
 
-# def LogIn():
-# driver.get("https://www.instagram.com/accounts/login/")
-# sleep(2)
-# driver.find_element_by_xpath("//input[@name=\"username\"]")\
-#     .send_keys(username)
-# driver.find_element_by_xpath("//input[@name=\"password\"]")\
-#     .send_keys(password)
-# driver.find_element_by_xpath('//button[@type="submit"]')\
-#     .click()
-# sleep(6)
-# driver.find_element_by_xpath("//button[contains(text(), 'Agora não')]")\
-#     .click()
-# sleep(2)
-# driver.find_element_by_xpath("//button[contains(text(), 'Agora não')]")\
-#     .click()
-# sleep(2)
-
-
 def get_unfollowers(username):
   driver.get('https://www.instagram.com/{}'.format(username))
   sleep(2)
