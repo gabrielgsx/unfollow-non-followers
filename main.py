@@ -38,7 +38,7 @@ def _get_following():
   names = [name.text for name in links if name.text != '']
   file = open("data.py", "w")
   list_following = repr(names)
-  file.write("x = " + list_following + "\n") # CREATE A PY FILE WITH ALL THE PEOPLE WHO YOU FOLLOWING
+  file.write("x = " + list_following + "\n") # CREATE A PY LIST FILE WITH ALL THE PEOPLE WHO YOU FOLLOWING
   file.close() 
   return
 
@@ -57,7 +57,7 @@ def _get_followers():
   names2 = [name.text for name in links if name.text != '']
   file = open("data2.py", "w")
   list_followers = repr(names2) 
-  file.write("y = " + list_followers + "\n")  # CREATE A PY FILE WITH ALL THE FOLLOWERS
+  file.write("y = " + list_followers + "\n")  # CREATE A PY LIST FILE WITH ALL THE FOLLOWERS 
   file.close() 
   return
 
