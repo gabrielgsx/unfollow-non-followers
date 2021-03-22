@@ -1,27 +1,28 @@
 from selenium import webdriver
 from time import sleep
 from random import randint
-from data/following import x
-from data/followers import y
+from data import x
+from data2 import y
+from remover import z
 
 options = webdriver.ChromeOptions()
 options.add_argument("user-data-dir=User")
 driver = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
-tempo = randint(2, 6)
-
-remover = list(set(x) - set(y))
+#tempo = randint(2, 6)
 
 
-def unfollow(remover):
-    for c in remover:
+def unfollow(z):
+    for c in z:
         driver.get("https://www.instagram.com/{}/".format(c))
         sleep(3)
-        un_button1 = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/div[1]/div[1]/div/div[2]/div/span/span[1]/button').click()
-        sleep(tempo)
-        un_button2 = driver.find_element_by_xpath('/html/body/div[5]/div/div/div/div[3]/button[1]').click()
-        sleep(tempo)
-        remover.remove(c)
+        un_button1 = driver.find_element_by_class_name('_5f5mN.-fzfL._6VtSN.yZn4P').click()
+        sleep(3)
+        
+        un_button2 = driver.find_element_by_class_name('aOOlW.-Cab_').click()
+        sleep(3)
+        #x.remove(c)
+        break
         
 
-unfollow(remover)
+unfollow(z)
 
