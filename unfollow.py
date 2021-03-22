@@ -3,7 +3,7 @@ from time import sleep
 from random import randint
 from data import x
 from data2 import y
-from remover import z
+from get-non-followers import z
 
 options = webdriver.ChromeOptions()
 options.add_argument("user-data-dir=User")
