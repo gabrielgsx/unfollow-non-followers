@@ -15,4 +15,6 @@ pip install selenium
 
 # Run "main.py"
 
-# Run unfollow.py
+# Run "get-non-followers.py"
+
+#Run "unfollow.py"
