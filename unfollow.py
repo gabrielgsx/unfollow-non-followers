@@ -20,7 +20,6 @@ def unfollow(z):
         
         un_button2 = driver.find_element_by_class_name('aOOlW.-Cab_').click()
         sleep(3)
-        #x.remove(c)
         break
         
 
