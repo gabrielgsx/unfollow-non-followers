@@ -9,4 +9,3 @@ def remove(x, y):
     file.close() 
 
 remove(x, y)
-
