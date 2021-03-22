@@ -11,12 +11,13 @@ driver = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
 driver.get("https://www.instagram.com")
 sleep(3)
 
+
 def get_unfollowers(username):
   driver.get('https://www.instagram.com/{}'.format(username))
   sleep(2)
   driver.find_element_by_xpath("//a[contains(@href, '{}/following')]".format(username)).click()
   _get_following()
-  sleep(15)
+  sleep(8)
   driver.get('https://www.instagram.com/{}'.format(username))
   driver.find_element_by_xpath("//a[contains(@href, '{}/followers')]".format(username)).click()
   _get_followers()
@@ -35,8 +36,9 @@ def _get_following():
       """, scroll_box)
   links = scroll_box.find_elements_by_tag_name('a')
   names = [name.text for name in links if name.text != '']
-  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\following.py", "w")  # CHANGE IT WITH YOUR DIRECTORY
-  file.write(f"{names}") 
+  file = open("data.py", "w")
+  list_following = repr(names)
+  file.write("x = " + list_following + "\n")
   file.close() 
   return
 
@@ -53,14 +55,12 @@ def _get_followers():
       """, scroll_box)
   links = scroll_box.find_elements_by_tag_name('a')
   names2 = [name.text for name in links if name.text != '']
-  file = open(r"C:\Users\gabri\Desktop\fol\app_notas\data\followers.py", "w") # CHANGE IT WITH YOUR DIRECTORY
-  file.write(f"{names2}") 
+  file = open("data2.py", "w")
+  list_followers = repr(names2) 
+  file.write("y = " + list_followers + "\n")
   file.close() 
   return
 
 
 
 get_unfollowers(username)
-
-
-
