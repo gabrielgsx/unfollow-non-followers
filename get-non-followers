@@ -1,0 +1,12 @@
+from data import x
+from data2 import y
+import os
+def remove(x, y):
+    remover = list(set(x) - set(y))
+    file = open("remover.py", "w")
+    list_nonfollowers = repr(remover)
+    file.write("z = " + list_nonfollowers + "\n") 
+    file.close() 
+
+remove(x, y)
+
